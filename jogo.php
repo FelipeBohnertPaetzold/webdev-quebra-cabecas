@@ -43,7 +43,11 @@
             <?php for ($l = 0; $l < 6; $l ++) : ?>
                 <tr>
                     <?php for($c=1; $c < 8; $c++) : ?>
-                        <td><img width="100%" src="imagens/<?php echo $embaralhado[$l][$c]?>.jpg" /></td>
+                        <?php if(!$embaralhado[$l][$c]) : ?>
+                            <td><img width="100px" src="./check.png" /></td>
+                        <?php else: ?>
+                            <td><img width="100%" src="imagens/<?php echo $embaralhado[$l][$c]?>.jpg" /></td>
+                        <?php endif; ?>
                     <?php endfor; ?>
                 </tr>
             <?php endfor; ?>
@@ -54,7 +58,7 @@
         <div class="panel panel-primary">
             <div class="panel-heading">Mover</div>
             <div class="panel-body">
-                <form action="mover_peca.php" method="get">
+                <form action="jogo.php" method="get">
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1">Linha Origem</label>
                         <input type="number" class="form-control" name="linha_origem" placeholder="Linha origem" required>
