@@ -1,4 +1,4 @@
-<?php require_once './retorna_array_inicial.php' ?>
+<?php require_once './mostrar_array_jogo.php' ?>
 <html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <head>
@@ -27,7 +27,11 @@
             <?php for ($l = 0; $l < 6; $l ++) : ?>
                 <tr>
                     <?php for($c=1; $c < 8; $c++) : ?>
-                        <td><img width="100px" src="./question.png" /></td>
+                        <?php if(!$atual[$l][$c]) : ?>
+                            <td><img width="100px" src="./question.png" /></td>
+                            <?php else: ?>
+                                <td><img width="100%" src="imagens/<?php echo $atual[$l][$c]?>.jpg" /></td>
+                        <?php endif; ?>
                     <?php endfor; ?>
                 </tr>
             <?php endfor; ?>
@@ -39,7 +43,7 @@
             <?php for ($l = 0; $l < 6; $l ++) : ?>
                 <tr>
                     <?php for($c=1; $c < 8; $c++) : ?>
-                        <td><img width="100%" src="imagens/<?php echo $mesa[$l][$c]?>.jpg" /></td>
+                        <td><img width="100%" src="imagens/<?php echo $embaralhado[$l][$c]?>.jpg" /></td>
                     <?php endfor; ?>
                 </tr>
             <?php endfor; ?>
