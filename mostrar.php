@@ -1,3 +1,4 @@
+<?php require_once './retorna_array_inicial.php' ?>
 <html>
 	<head>
 		<style>
@@ -8,10 +9,10 @@
 	</head>
 	<body>
 		<table>
-			<?php for($linha=1; $linha<=6; $linha++) : ?>
+			<?php for ($l = 0; $l < 6; $l ++) : ?>
 			<tr>
-				<?php for($coluna=1; $coluna<=8; $coluna++) : ?>
-				<td><img src="imagens/<?php echo ($linha*8)-8+$coluna ?>.jpg" /></td>
+				<?php for($c=1; $c < 8; $c++) : ?>
+				<td><img src="imagens/<?php echo $mesa[$l][$c]?>.jpg" /></td>
 				<?php endfor; ?>
 			</tr>
 			<?php endfor; ?>
