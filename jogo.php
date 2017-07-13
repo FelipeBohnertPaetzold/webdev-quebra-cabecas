@@ -26,7 +26,7 @@
             <tbody>
             <?php for ($l = 0; $l < 6; $l ++) : ?>
                 <tr>
-                    <?php for($c=1; $c < 8; $c++) : ?>
+                    <?php for($c=0; $c < 8; $c++) : ?>
                         <?php if(!$atual[$l][$c]) : ?>
                             <td><img width="100px" src="./question.png" /></td>
                             <?php else: ?>
@@ -42,7 +42,7 @@
             <tbody>
             <?php for ($l = 0; $l < 6; $l ++) : ?>
                 <tr>
-                    <?php for($c=1; $c < 8; $c++) : ?>
+                    <?php for($c=0; $c < 8; $c++) : ?>
                         <?php if(!$embaralhado[$l][$c]) : ?>
                             <td><img width="100px" src="./check.png" /></td>
                         <?php else: ?>
@@ -83,6 +83,11 @@
                         </button>
                     </div>
                 </form>
+            </div>
+            <div class="panel-footer">
+                <div class="alert alert-danger" role="alert">
+                    <strong>Erros: </strong><?php echo $errors ?>
+                </div>
             </div>
         </div>
     </div>

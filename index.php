@@ -33,18 +33,6 @@
                 <?php endfor; ?>
                 </tbody>
             </table>
-            <hr>
-            <table>
-                <tbody>
-                <?php for ($l = 0; $l < 6; $l ++) : ?>
-                    <tr>
-                        <?php for($c=1; $c < 8; $c++) : ?>
-                            <td><img src="imagens/<?php echo $mesa[$l][$c]?>.jpg" /></td>
-                        <?php endfor; ?>
-                    </tr>
-                <?php endfor; ?>
-                </tbody>
-            </table>
         </div>
         <div class="col-md-4">
             <div class="panel panel-primary">
